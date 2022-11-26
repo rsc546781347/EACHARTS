@@ -1,0 +1,561 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+h3 {
+    font-size: 0.225rem;
+    color: #fff;
+    font-weight: 400;
+}
+
+h4 {
+    font-weight: normal;
+}
+
+body {
+    background: url(../images/bg.jpg) no-repeat;
+    background-size: cover;
+}
+
+.viewport {
+    min-width: 1024px;
+    max-width: 1920px;
+    min-height: 10rem;
+    margin: 0 auto;
+    padding: 0.875rem 0.25rem 0;
+    background: url(../images/logo.png) no-repeat;
+    background-size: contain;
+    display: flex;
+}
+
+
+/* -- 第一栏 -- */
+
+.column-l {
+    /* background-color: rgb(243, 159, 159); */
+    flex: 3;
+}
+
+.column-c {
+    /* background-color: rgb(195, 241, 26); */
+    flex: 4;
+    margin: 0.375rem 0.1875rem 0;
+}
+
+.column-r {
+    /* background-color: rgb(141, 103, 247); */
+    flex: 3;
+}
+
+
+/* 公共边框图片 */
+
+.panel {
+    border: 1px solid transparent;
+    border-image-source: url(../images/border.png);
+    border-width: 0.6375rem 0.475rem 0.25rem 1.65rem;
+    border-image-slice: 51 38 20 132;
+    position: relative;
+    margin-bottom: 0.25rem;
+}
+
+.inner {
+    position: absolute;
+    top: -0.6375rem;
+    right: -0.475rem;
+    bottom: -0.25rem;
+    left: -1.65rem;
+    padding: 0.225rem 0.325rem;
+}
+
+
+/* 公共点点部分 */
+
+.line {
+    display: inline-block;
+    width: 0.05rem;
+    height: .125rem;
+    border-radius: 5px;
+    margin-right: .0625rem;
+}
+
+
+/* 设备总数 */
+
+.equipment {
+    height: 1.25rem;
+    box-sizing: border-box;
+}
+
+.equipment ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.equipment ul li h3 {
+    font-size: 0.3rem;
+    color: #fff;
+    margin: 0 0 0.06rem 0;
+}
+
+.equipment ul li p {
+    font-size: 0.15rem;
+    color: #4c9bfd;
+}
+
+
+/* 设备监控 */
+
+.monitor {
+    height: 5.125rem;
+    box-sizing: border-box;
+}
+
+.monitor-t {
+    height: 0.375rem;
+    font-size: .225rem;
+    color: #1349C0;
+    display: flex;
+}
+
+.monitor-t h3 {
+    color: #1349C0;
+}
+
+.monitor-t .cf {
+    color: #fff;
+}
+
+.monitor-t p {
+    width: .0375rem;
+    height: .375rem;
+    background-color: #6feeef;
+    margin: 0 0.25rem;
+}
+
+
+/* 故障设备监控 */
+
+.monitor-c {
+    margin-top: 0.125rem;
+    /* display: none; */
+}
+
+.monitor-c .top {
+    height: 0.4375rem;
+    color: #68d8fe;
+    line-height: 0.4375rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    font-size: 0.15rem;
+    display: flex;
+}
+
+.monitor-c .top :nth-of-type(1) {
+    flex: 1;
+}
+
+.monitor-c .top :nth-of-type(2) {
+    flex: 3;
+}
+
+.monitor-c .top :nth-of-type(3) {
+    flex: 1;
+}
+
+
+/* 滚动部分 */
+
+.roll ul li {
+    display: flex;
+    font-size: 0.15rem;
+    line-height: 0.435rem;
+    color: #61a8ff;
+}
+
+.roll li span:nth-of-type(1) {
+    flex: 1;
+}
+
+.roll li span:nth-of-type(2) {
+    flex: 3;
+}
+
+.roll li span:nth-of-type(3) {
+    flex: 1;
+}
+
+
+/* 滚动动画 */
+
+.overflow {
+    height: 3.7rem;
+    overflow: hidden;
+}
+
+.roll ul:hover {
+    animation-play-state: paused;
+}
+
+.roll li:hover {
+    background-color: #1E316C;
+}
+
+.roll ul {
+    animation: slide 8s linear infinite;
+}
+
+@keyframes slide {
+    0% {}
+    100% {
+        transform: translate(0, -200px);
+    }
+}
+
+
+/* 点位分布统计 */
+
+.point {
+    height: 2.8rem;
+}
+
+.point .picture {
+    margin-top: 0.125rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* 图列部分 */
+
+.point .picture-l {
+    width: 3.9rem;
+    height: 2.6rem;
+    /* background-color: rgb(230, 175, 175); */
+}
+
+
+/* 点位分布统计右边部分 */
+
+.point .picture-r {
+    background-image: url(../images/rect.png);
+    background-size: cover;
+}
+
+.point .picture-r ul {
+    width: 1.7rem;
+    height: 2.6rem;
+    padding: 0.45rem 0.3rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.point .picture-r h4 {
+    font-size: 0.25rem;
+    color: #fff;
+}
+
+.point .picture-r p {
+    color: #f8ab05;
+    font-size: 0.175rem;
+}
+
+
+/* 地图部分 */
+
+.map {
+    height: 6.25rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.25rem;
+}
+
+.map h3 {
+    line-height: 1;
+    padding: 0.2rem 0;
+    text-indent: .375rem;
+    background: url(../images/shebei.png) no-repeat 0rem 0.2rem;
+    background-size: .25rem;
+}
+
+.map .picture1 {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+
+/* 全国用户总量统计 */
+
+.user {
+    height: 2.8rem;
+}
+
+.user .picture {
+    margin-top: 0.125rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* 图列部分 */
+
+.user .user-l {
+    width: 4.7rem;
+    height: 2.6rem;
+}
+
+
+/* 全国用户总量统计右边部分 */
+
+.user .user-r {
+    background-image: url(../images/rect.png);
+    background-size: cover;
+}
+
+.user .user-r ul {
+    width: 1.7rem;
+    height: 2.6rem;
+    padding: 0.45rem 0.3rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.user .user-r h4 {
+    font-size: 0.25rem;
+    color: #fff;
+}
+
+.user .user-r p {
+    color: #4cfde2;
+    font-size: 0.175rem;
+}
+
+
+/* 第三栏 */
+
+
+/* 订单量 销售额部分 */
+
+
+/* 订单量 销售额部分上面day部分 */
+
+.order {
+    height: 0.75rem;
+}
+
+.days ul {
+    display: flex;
+}
+
+.days .day {
+    color: #1950c4;
+    font-size: .225rem;
+    /* padding: 0 0.2rem 0 0; */
+}
+
+.days .lis {
+    width: 0.025rem;
+    height: 0.225rem;
+    background-color: #00f2f1;
+    margin: .0375rem .225rem 0;
+}
+
+.days .cf {
+    color: #fff;
+}
+
+
+/* 订单量 销售额部分 */
+
+.number ul {
+    margin-top: 0.125rem;
+    display: flex;
+}
+
+.number ul li {
+    flex: 1;
+}
+
+.number ul li h4 {
+    font-size: .275rem;
+    color: #fff;
+    margin-bottom: .0625rem;
+}
+
+.number ul li p {
+    color: #4c9bfd;
+    font-size: 0.175rem;
+}
+
+
+/* 销售额统计 */
+
+.sales {
+    height: 2.85rem;
+    box-sizing: border-box;
+}
+
+.sales .title {
+    overflow: hidden;
+    margin-bottom: 0.15rem;
+}
+
+.sales h3 {
+    padding-right: .3125rem;
+    margin-right: .3125rem;
+    border-right: .025rem solid #00f2f1;
+    float: left;
+    height: 0.225rem;
+    line-height: 0.225rem;
+    margin-top: .0375rem;
+}
+
+.sales .time {
+    display: flex;
+    float: left;
+    /* margin-top: .0375rem; */
+}
+
+.sales .time li {
+    font-size: 0.175rem;
+    color: #0bace6;
+    margin-right: .375rem;
+    padding: 0.05rem;
+    border-radius: 0.0375rem;
+}
+
+.lines {
+    width: 100%;
+    height: 1.775rem;
+    /* background-color: rgb(233, 193, 193); */
+}
+
+.sales .time #bj {
+    background-color: #4c9bfd;
+    color: #fff;
+}
+
+
+/* 渠道分布 季度销售进度 */
+
+.box {
+    display: flex;
+    box-sizing: border-box;
+}
+
+.distribution {
+    margin-right: 0.15rem;
+    flex: 4;
+    height: 1.76rem;
+}
+
+.channel {
+    margin-top: .1rem;
+    width: 100%;
+    height: 80%;
+    /* background-color: rgb(213, 236, 182); */
+}
+
+
+/* 季度销售进度 */
+
+.quarter {
+    flex: 1;
+}
+
+.quarter .inner {
+    padding: 0.225rem 0.28rem;
+}
+
+.quarter h4 {
+    font-size: .4375rem;
+    color: #fff;
+    text-align: center;
+    line-height: 0.8rem;
+    margin-top: .2rem;
+}
+
+.quarter h4 a {
+    font-size: .20rem;
+}
+
+.quarter ul {
+    display: flex;
+}
+
+.quarter ul li {
+    width: 50%;
+}
+
+.quarter ul li h5 {
+    color: #fff;
+    font-size: 0.3rem;
+    margin-bottom: 0.07rem;
+    font-weight: normal;
+}
+
+.quarter ul li p {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #4cfde2;
+    font-size: 0.175rem;
+}
+
+
+/* 完成进度统计 */
+
+.finish {
+    height: 1.76rem;
+}
+
+.finish .picture {
+    /* margin-top: 0.125rem; */
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* 完成进度统计  图部分 */
+
+.finish-l {
+    width: 100%;
+    /* background-color: rgb(238, 183, 183); */
+}
+
+
+/* 完成进度统计右边部分 */
+
+.finish-r {
+    background-image: url(../images/rect.png);
+    background-size: cover;
+}
+
+.finish-r ul {
+    box-sizing: border-box;
+    width: 1.7rem;
+    height: 1.8rem;
+    padding: 0.25rem 0.3rem;
+    margin-left: .1875rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.finish-r h4 {
+    font-size: 0.25rem;
+    color: #fff;
+}
+
+.finish-r p {
+    color: #f8ab05;
+    font-size: 0.175rem;
+}
